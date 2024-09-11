@@ -40,7 +40,7 @@ function Avatar(props) {
   };
 
   const saveAvatar = () => {
-    fetch("/api" +"http://localhost:8080/users/" + currentUserId, {
+    fetch("http://localhost:8080/users/" + currentUserId, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

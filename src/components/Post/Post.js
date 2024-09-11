@@ -63,7 +63,7 @@ function Post(props) {
     };
 
     const refreshComments = () => {
-        fetch("/api" +"http://localhost:8080/comments?postId=" + postId)
+        fetch("http://localhost:8080/comments?postId=" + postId)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -88,7 +88,7 @@ function Post(props) {
     }, [refresh]);
 
     const saveLike = () => {
-        fetch("/api" +'http://localhost:8080/likes', {
+        fetch('http://localhost:8080/likes', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -104,7 +104,7 @@ function Post(props) {
     };
 
     const deleteLike = () => {
-        fetch("/api" +'http://localhost:8080/likes/' + likeId, {
+        fetch('http://localhost:8080/likes/' + likeId, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

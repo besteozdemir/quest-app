@@ -9,7 +9,7 @@ function User() {
   const [user, setUser] = useState();
 
   const getUser = () => {
-    fetch("/api" +"http://localhost:8080/users/" + userId, {
+    fetch("http://localhost:8080/users/" + userId, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

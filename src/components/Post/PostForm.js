@@ -35,7 +35,7 @@ function PostForm(props) {
     const [isSend, setIsSend] = useState(false);
 
     const savePost = () => {
-        fetch("/api" +"http://localhost:8080/posts",
+        fetch("http://localhost:8080/posts",
             {
                 method: "POST",
                 headers: {

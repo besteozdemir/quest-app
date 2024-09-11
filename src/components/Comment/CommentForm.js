@@ -39,7 +39,7 @@ const CommentForm = (props) => {
   const initial = userName ? userName.charAt(0).toUpperCase() : "?";
 
   const saveComment = () => {
-    fetch("/api" +"http://localhost:8080/comments",
+    fetch("http://localhost:8080/comments",
         {
             method: "POST",
             headers: {
