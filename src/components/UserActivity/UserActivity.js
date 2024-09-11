@@ -29,7 +29,7 @@ function PopUp({ isOpen, postId, setIsOpen }) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const getPost = () => {
-    fetch("/api" + `http://localhost:8080/posts/${postId}`, {
+    fetch(`http://localhost:8080/posts/${postId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -110,10 +110,10 @@ function UserActivity(props) {
   // Fetch either notifications or posts depending on the profile being viewed
   const fetchData = () => {
     const url = currentUserId === userId 
-      ? "/api" +`http://localhost:8080/users/activity/${userId}` // Fetch notifications for own profile
-      : "/api" +`http://localhost:8080/posts?userId=${userId}`;   // Fetch posts for other profiles
+      ? `http://localhost:8080/users/activity/${userId}` // Fetch notifications for own profile
+      : `http://localhost:8080/posts?userId=${userId}`;   // Fetch posts for other profiles
 
-    fetch("/api" +url, {
+    fetch(url, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
