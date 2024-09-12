@@ -1,8 +1,9 @@
 {
   "rewrites": [
     {
-      "source": "http://localhost:8080/:path*",
+      "source": "/:path*",  // Match any path
       "destination": "https://springboot-render-twqp.onrender.com/:path*"
     }
   ]
 }
+
