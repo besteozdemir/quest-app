@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/:path*",  // Match any path
+      "source": "/:path*",
       "destination": "https://springboot-render-twqp.onrender.com/:path*"
     }
   ]
